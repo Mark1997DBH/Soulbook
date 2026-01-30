@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="header">
+    <text class="date-title">{{currentDate}}</text>
+    <text class="subtitle">记录每一份微小的情绪</text>
+  </view>
+
+  <view class="list-container">
+    <block wx:if="{{records.length > 0}}">
+      <view class="card record-item" wx:for="{{records}}" wx:key="id">
+        <view class="record-left">
+          <view class="mood-circle" style="background-color: var(--color-{{item.type}})">
+            <text class="emoji">{{moodMap[item.type].icon}}</text>
+          </view>
+        </view>
+        <view class="record-content">
+          <view class="record-header">
+            <text class="record-type">{{moodMap[item.type].text}}</text>
+            <text class="record-date">{{item.date}}</text>
+          </view>
+          <text class="record-note" wx:if="{{item.note}}">{{item.note}}</text>
+        </view>
+      </view>
+    </block>
+    <view wx:else class="empty-state">
+      <text>还没有记录哦，快去记一笔吧~</text>
+    </view>
+  </view>
+</view>

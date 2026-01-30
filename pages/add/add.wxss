@@ -1,0 +1,75 @@
+.input-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: var(--text-main);
+  margin-bottom: 24rpx;
+}
+
+.mood-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.mood-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 110rpx;
+  height: 140rpx;
+  border-radius: 20rpx;
+  border: 2rpx solid transparent;
+  transition: all 0.2s;
+  background-color: #f8f8f8;
+}
+
+.mood-icon {
+  font-size: 50rpx;
+  margin-bottom: 10rpx;
+}
+
+.mood-item text {
+  font-size: 24rpx;
+  color: var(--text-secondary);
+}
+
+.mood-item.active {
+  background-color: #fff;
+  border-color: var(--item-color);
+  box-shadow: 0 4rpx 14rpx rgba(0,0,0,0.1);
+  transform: translateY(-4rpx);
+}
+
+.mood-item.active text {
+  color: var(--item-color);
+  font-weight: bold;
+}
+
+.picker-view {
+  font-size: 30rpx;
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  border-radius: 12rpx;
+  color: var(--text-main);
+}
+
+.diary-input {
+  width: 100%;
+  height: 200rpx;
+  background-color: #f8f8f8;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+}
+
+.save-btn {
+  width: 100%;
+  margin-top: 40rpx;
+}

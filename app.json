@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/add/add",
+    "pages/stats/stats"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "温馨小记",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F9F9F9"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FFD166",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "日记",
+        "iconPath": "assets/tabbar/home.png",
+        "selectedIconPath": "assets/tabbar/home_active.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "记一笔",
+        "iconPath": "assets/tabbar/add.png",
+        "selectedIconPath": "assets/tabbar/add_active.png"
+      },
+      {
+        "pagePath": "pages/stats/stats",
+        "text": "分析",
+        "iconPath": "assets/tabbar/chart.png",
+        "selectedIconPath": "assets/tabbar/chart_active.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

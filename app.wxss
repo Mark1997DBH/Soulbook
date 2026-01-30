@@ -1,0 +1,55 @@
+/** app.wxss **/
+page {
+  --color-happy: #FFD166;
+  --color-normal: #06D6A0;
+  --color-sad: #118AB2;
+  --color-angry: #EF476F;
+  --color-excited: #FF9F1C;
+  --bg-color: #F9F9F9;
+  --text-main: #333333;
+  --text-secondary: #999999;
+  
+  background-color: var(--bg-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+/* 通用卡片样式 */
+.card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+  margin-bottom: 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  background-color: var(--color-happy);
+  color: #fff;
+  border-radius: 50rpx;
+  padding: 20rpx 0;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4rpx 10rpx rgba(255, 209, 102, 0.4);
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--text-main);
+  margin-bottom: 20rpx;
+}

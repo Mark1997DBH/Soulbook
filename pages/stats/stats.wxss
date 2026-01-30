@@ -1,0 +1,64 @@
+.summary-card {
+  text-align: center;
+  padding: 50rpx;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.summary-title {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.summary-count {
+  font-size: 80rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.chart-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.row-label {
+  width: 120rpx;
+  font-size: 28rpx;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+}
+
+.row-label .emoji {
+  margin-right: 10rpx;
+}
+
+.row-bar-area {
+  flex: 1;
+  height: 24rpx;
+  background-color: #f0f0f0;
+  border-radius: 12rpx;
+  overflow: hidden;
+  margin: 0 20rpx;
+}
+
+.row-bar {
+  height: 100%;
+  border-radius: 12rpx;
+  transition: width 1s ease-in-out;
+}
+
+.row-value {
+  width: 80rpx;
+  font-size: 24rpx;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 40rpx;
+  font-size: 28rpx;
+}

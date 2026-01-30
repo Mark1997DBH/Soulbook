@@ -1,0 +1,79 @@
+<view class="container">
+  <view class="card input-card">
+    <view class="section-title">今天心情怎么样？</view>
+    
+    <view class="mood-grid">
+      <view 
+        class="mood-item {{selectedType === 'happy' ? 'active' : ''}}" 
+        bindtap="selectMood" 
+        data-type="happy"
+        style="--item-color: var(--color-happy)"
+      >
+        <view class="mood-icon">😊</view>
+        <text>开心</text>
+      </view>
+      
+      <view 
+        class="mood-item {{selectedType === 'excited' ? 'active' : ''}}" 
+        bindtap="selectMood" 
+        data-type="excited"
+        style="--item-color: var(--color-excited)"
+      >
+        <view class="mood-icon">😆</view>
+        <text>兴奋</text>
+      </view>
+
+      <view 
+        class="mood-item {{selectedType === 'normal' ? 'active' : ''}}" 
+        bindtap="selectMood" 
+        data-type="normal"
+        style="--item-color: var(--color-normal)"
+      >
+        <view class="mood-icon">😐</view>
+        <text>平淡</text>
+      </view>
+
+      <view 
+        class="mood-item {{selectedType === 'sad' ? 'active' : ''}}" 
+        bindtap="selectMood" 
+        data-type="sad"
+        style="--item-color: var(--color-sad)"
+      >
+        <view class="mood-icon">😢</view>
+        <text>难过</text>
+      </view>
+
+      <view 
+        class="mood-item {{selectedType === 'angry' ? 'active' : ''}}" 
+        bindtap="selectMood" 
+        data-type="angry"
+        style="--item-color: var(--color-angry)"
+      >
+        <view class="mood-icon">😡</view>
+        <text>生气</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="card input-card">
+    <view class="section-title">日期</view>
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+      <view class="picker-view">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="card input-card">
+    <view class="section-title">写点什么...</view>
+    <textarea 
+      class="diary-input" 
+      placeholder="记录下此刻的想法吧..." 
+      value="{{note}}"
+      bindinput="bindInput"
+      maxlength="200"
+    ></textarea>
+  </view>
+
+  <button class="btn-primary save-btn" bindtap="saveRecord">保存记录</button>
+</view>

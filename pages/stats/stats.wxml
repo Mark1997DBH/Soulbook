@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="card summary-card">
+    <view class="summary-title">总记录天数</view>
+    <view class="summary-count">{{total}}</view>
+  </view>
+
+  <view class="card chart-card">
+    <view class="title">心情分布</view>
+    
+    <view class="chart-container" wx:if="{{total > 0}}">
+      <view class="chart-row" wx:for="{{chartData}}" wx:key="type">
+        <view class="row-label">
+          <text class="emoji">{{item.icon}}</text>
+          <text>{{item.label}}</text>
+        </view>
+        <view class="row-bar-area">
+          <view class="row-bar" style="width: {{item.percent}}%; background-color: {{item.color}}"></view>
+        </view>
+        <view class="row-value">{{item.count}}次</view>
+      </view>
+    </view>
+    
+    <view wx:else class="empty-state">
+      暂无数据，去记录一下吧~
+    </view>
+  </view>
+</view>

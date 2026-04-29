@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="card config-card">
+    <view class="section-title">DeepSeek 配置</view>
+    <input class="api-input" password="{{!showApiKey}}" placeholder="请输入你的 DeepSeek API Key" value="{{apiKey}}" bindinput="onApiKeyInput" />
+    <view class="actions-row">
+      <button size="mini" class="btn-ghost" bindtap="toggleShowApiKey">{{showApiKey ? '隐藏' : '显示'}}</button>
+      <button size="mini" class="btn-ghost" bindtap="saveApiKey">保存 Key</button>
+      <button size="mini" class="btn-ghost" bindtap="clearChat">清空对话</button>
+    </view>
+  </view>
+
+  <scroll-view class="chat-list card" scroll-y="true" scroll-with-animation="true" scroll-into-view="{{scrollToId}}">
+    <block wx:for="{{messages}}" wx:key="id">
+      <view id="{{item.id}}" class="chat-item {{item.role}}">
+        <view class="bubble">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{loading}}" class="chat-item assistant">
+      <view class="bubble typing">姐姐正在认真回复你…</view>
+    </view>
+  </scroll-view>
+
+  <view class="composer card">
+    <textarea class="input" maxlength="500" placeholder="跟姐姐说说你现在的心情吧..." value="{{inputText}}" bindinput="onInput" />
+    <button class="btn-primary" loading="{{loading}}" disabled="{{loading}}" bindtap="sendMessage">发送</button>
+  </view>
+</view>

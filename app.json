@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/add/add",
-    "pages/stats/stats"
+    "pages/stats/stats",
+    "pages/chat/chat"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -34,6 +35,12 @@
         "text": "分析",
         "iconPath": "assets/tabbar/chart.png",
         "selectedIconPath": "assets/tabbar/chart_active.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "暖心聊",
+        "iconPath": "assets/tabbar/home.png",
+        "selectedIconPath": "assets/tabbar/home_active.png"
       }
     ]
   },

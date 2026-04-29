@@ -2,6 +2,7 @@
   <view class="card config-card">
     <view class="section-title">DeepSeek 配置</view>
     <input class="api-input" password="{{!showApiKey}}" placeholder="请输入你的 DeepSeek API Key" value="{{apiKey}}" bindinput="onApiKeyInput" />
+    <input class="api-input" placeholder="接口地址，默认 https://api.deepseek.com" value="{{apiBase}}" bindinput="onApiBaseInput" />
     <view class="actions-row">
       <button size="mini" class="btn-ghost" bindtap="toggleShowApiKey">{{showApiKey ? '隐藏' : '显示'}}</button>
       <button size="mini" class="btn-ghost" bindtap="saveApiKey">保存 Key</button>

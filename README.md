@@ -55,3 +55,14 @@
 
 请确认是否同意将“SQLite”替换为“小程序本地存储模拟数据库”方案？（这是目前纯微信小程序环境下的唯一可行方案）。
 确认后，我将立即开始代码编写。
+## 新增功能：暖心姐姐 AI 对话（DeepSeek）
+- 页面路径：`pages/chat/chat`
+- 入口：首页新增“和暖心姐姐聊聊”按钮。
+- 模型：`deepseek-chat`
+- API Key：在页面内输入并本地保存（`wx.setStorageSync('deepseek_api_key')`）。
+- 聊天记录：本地保留最近 30 条（`chat_history`）。
+
+### 使用前准备
+1. 在微信开发者工具 -> 详情 -> 本地设置/服务器域名 中，将 `https://api.deepseek.com` 加入 request 合法域名。
+2. 打开“暖心姐姐”页面，粘贴你的 DeepSeek API Key 并保存。
+3. 即可开始对话。

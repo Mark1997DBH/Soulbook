@@ -85,3 +85,6 @@
   color: var(--text-secondary);
   font-size: 28rpx;
 }
+
+.entry-wrap { width: 100%; margin-bottom: 18rpx; }
+.ai-btn { width: 100%; }

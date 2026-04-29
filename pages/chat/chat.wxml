@@ -1,0 +1,27 @@
+<view class="chat-page">
+  <view class="card config-card">
+    <view class="title">DeepSeek 配置</view>
+    <input class="api-input" password="{{!showApiKey}}" placeholder="请输入你的 DeepSeek API Key" value="{{apiKey}}" bindinput="onApiKeyInput" />
+    <view class="config-actions">
+      <button class="mini-btn" size="mini" bindtap="toggleApiVisible">{{showApiKey ? '隐藏' : '显示'}}</button>
+      <button class="mini-btn" size="mini" bindtap="saveApiKey">保存 Key</button>
+    </view>
+  </view>
+
+  <view class="card role-card">
+    <text>角色：暖心大姐姐（抚慰心灵、积极正能量）</text>
+  </view>
+
+  <scroll-view class="messages card" scroll-y="true" scroll-with-animation="true" scroll-into-view="{{scrollToView}}">
+    <block wx:for="{{messages}}" wx:key="id">
+      <view id="msg-{{item.id}}" class="msg-row {{item.role}}">
+        <view class="msg-bubble">{{item.content}}</view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <view class="input-bar card">
+    <textarea class="input-box" maxlength="500" placeholder="和姐姐聊聊今天的心情吧..." value="{{inputText}}" bindinput="onInput" />
+    <button class="btn-primary send-btn" loading="{{loading}}" bindtap="sendMessage">发送</button>
+  </view>
+</view>

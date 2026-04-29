@@ -4,6 +4,10 @@
     <text class="subtitle">记录每一份微小的情绪</text>
   </view>
 
+  <view class="entry-wrap">
+    <button class="btn-primary ai-btn" bindtap="goChat">和暖心姐姐聊聊</button>
+  </view>
+
   <view class="list-container">
     <block wx:if="{{records.length > 0}}">
       <view class="card record-item" wx:for="{{records}}" wx:key="id">

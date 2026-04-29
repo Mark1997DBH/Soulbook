@@ -31,6 +31,10 @@ Page({
     });
   },
 
+  goChat() {
+    wx.navigateTo({ url: '/pages/chat/chat' });
+  },
+
   loadData(cb) {
     // 简单起见，这里加载所有数据，实际可以按月加载
     const list = db.getAll();

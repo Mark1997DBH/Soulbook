@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/add/add",
-    "pages/stats/stats"
+    "pages/stats/stats",
+    "pages/chat/chat"
   ],
   "window": {
     "backgroundTextStyle": "light",
